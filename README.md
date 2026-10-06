@@ -18,6 +18,7 @@ O repositório é atualizado conforme a disciplina avança.
 | [08-structs](./08-structs) | Structs | 1 |
 | [09-vetores-de-structs](./09-vetores-de-structs) | Vetores de structs | 2 |
 | [10-funcoes-sem-retorno](./10-funcoes-sem-retorno) | Funções `void` com matriz como parâmetro | 1 |
+| [11-funcoes-com-retorno](./11-funcoes-com-retorno) | Funções com retorno (`int`, `long long`) | 1 |
 
 ## Trabalhos
 
@@ -26,6 +27,7 @@ Atividades avaliativas com mais de um exercício por entrega, organizadas em `tr
 | Pasta | Tema | Exercícios |
 |---|---|---|
 | [trabalhos/vetores-e-matrizes](./trabalhos/vetores-e-matrizes) | Funções `void`, menu com `switch` e vetor de `struct` | 2 |
+| [trabalhos/vetores-e-matrizes-2](./trabalhos/vetores-e-matrizes-2) | Vetores, passagem por referência e um cadastro com busca por CPF | 4 |
 
 ## Requisitos
 
@@ -56,7 +58,9 @@ Cada pasta contém um `README.md` com a descrição dos exercícios e os arquivo
 - Cada exercício está em um único arquivo `.c`. As pastas foram renomeadas (sem acentos e com numeração de dois dígitos) para facilitar o uso em qualquer sistema.
 - Antes da publicação, foram corrigidos erros pontuais, sem alterar a proposta dos exercícios: variáveis não inicializadas (`01/ex1`, `04/ex2` e `09/ex1`), o `&` ausente no `scanf` de `01/ex4`, um trecho de código duplicado em `04/ex2`, os campos da agenda em `09/ex2`, que precisavam ser vetores de `char`, e o rótulo de uma mensagem em `09/ex1`.
 - Nas pastas `10-funcoes-sem-retorno` e `trabalhos/vetores-e-matrizes`, os arrays usam tamanho fixo (por exemplo, `matriz[5][5]`, `valores[100]` e `listaEst[15]`), em vez de arrays de tamanho variável (VLA), para manter compatibilidade com compiladores mais antigos.
-- Os exercícios de `trabalhos/vetores-e-matrizes` que leem valores decimais usam `setlocale(LC_ALL, "pt-BR.UTF-8")`, o que faz o `scanf("%f", ...)` esperar a vírgula como separador decimal (padrão brasileiro), em vez do ponto.
+- No `11-funcoes-com-retorno`, a função `factorial` retorna `long long`, para comportar fatoriais um pouco maiores sem estourar a faixa de um `int`.
+- Os exercícios de `trabalhos/vetores-e-matrizes` e `trabalhos/vetores-e-matrizes-2` que leem valores decimais usam `setlocale(LC_ALL, "pt-BR.UTF-8")`, o que faz o `scanf("%f", ...)` esperar a vírgula como separador decimal (padrão brasileiro), em vez do ponto.
+- No trabalho `vetores-e-matrizes-2`, o `ex03.c` tinha um erro de lógica (comparava cada valor com sua posição no vetor em vez de com a média) e dois trechos com acentuação corrompida foram corrigidos (`ex02.c` e `ex04.c`).
 - Alguns exercícios foram escritos para Windows: `04/ex1`, `05/ex1` e `06/ex4` usam `conio.h`, e `05/ex3`, `06/ex3`, `06/ex4` e `07/ex1` a `07/ex3` usam `system("pause")` e `system("cls")`, que não existem em outros sistemas.
 - Os exercícios `01/ex7`, `06/ex4`, `08/ex1`, `09/ex1` e `09/ex2` usam a função `gets()`, considerada insegura e removida do padrão C11. Em compiladores mais recentes, ela pode não estar disponível.
 
