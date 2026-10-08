@@ -1,6 +1,6 @@
 # Estrutura de Dados em C
 
-Exercícios em linguagem C da disciplina de Estrutura de Dados do curso de Bacharelado em Ciência da Computação. O conteúdo parte dos fundamentos da linguagem (entrada e saída, condicionais e laços de repetição) e avança para vetores, matrizes, structs e funções.
+Exercícios em linguagem C da disciplina de Estrutura de Dados do curso de Bacharelado em Ciência da Computação. O conteúdo parte dos fundamentos da linguagem (entrada e saída, condicionais e laços de repetição) e avança para vetores, matrizes, structs, funções e ponteiros.
 
 O repositório é atualizado conforme a disciplina avança.
 
@@ -19,6 +19,7 @@ O repositório é atualizado conforme a disciplina avança.
 | [09-vetores-de-structs](./09-vetores-de-structs) | Vetores de structs | 2 |
 | [10-funcoes-sem-retorno](./10-funcoes-sem-retorno) | Funções `void` com matriz como parâmetro | 1 |
 | [11-funcoes-com-retorno](./11-funcoes-com-retorno) | Funções com retorno (`int`, `long long`) | 1 |
+| [12-ponteiros](./12-ponteiros) | Ponteiros e alocação dinâmica com `malloc` | 1 |
 
 ## Trabalhos
 
@@ -59,6 +60,7 @@ Cada pasta contém um `README.md` com a descrição dos exercícios e os arquivo
 - Antes da publicação, foram corrigidos erros pontuais, sem alterar a proposta dos exercícios: variáveis não inicializadas (`01/ex1`, `04/ex2` e `09/ex1`), o `&` ausente no `scanf` de `01/ex4`, um trecho de código duplicado em `04/ex2`, os campos da agenda em `09/ex2`, que precisavam ser vetores de `char`, e o rótulo de uma mensagem em `09/ex1`.
 - Nas pastas `10-funcoes-sem-retorno` e `trabalhos/vetores-e-matrizes`, os arrays usam tamanho fixo (por exemplo, `matriz[5][5]`, `valores[100]` e `listaEst[15]`), em vez de arrays de tamanho variável (VLA), para manter compatibilidade com compiladores mais antigos.
 - No `11-funcoes-com-retorno`, a função `factorial` retorna `long long`, para comportar fatoriais um pouco maiores sem estourar a faixa de um `int`.
+- No `12-ponteiros`, cada aluno é alocado dinamicamente com `malloc(sizeof(aluno))`, com a memória liberada com `free` ao final do programa.
 - Os exercícios de `trabalhos/vetores-e-matrizes` e `trabalhos/vetores-e-matrizes-2` que leem valores decimais usam `setlocale(LC_ALL, "pt-BR.UTF-8")`, o que faz o `scanf("%f", ...)` esperar a vírgula como separador decimal (padrão brasileiro), em vez do ponto.
 - No trabalho `vetores-e-matrizes-2`, o `ex03.c` tinha um erro de lógica (comparava cada valor com sua posição no vetor em vez de com a média) e dois trechos com acentuação corrompida foram corrigidos (`ex02.c` e `ex04.c`).
 - Alguns exercícios foram escritos para Windows: `04/ex1`, `05/ex1` e `06/ex4` usam `conio.h`, e `05/ex3`, `06/ex3`, `06/ex4` e `07/ex1` a `07/ex3` usam `system("pause")` e `system("cls")`, que não existem em outros sistemas.
